@@ -12,5 +12,3 @@
 #### demo02
 加载js 模块，加载css 模块
 
-
-## Changelog

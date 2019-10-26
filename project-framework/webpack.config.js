@@ -27,11 +27,21 @@ module.exports = {
         use: ['babel-loader']
       },
       {
+        // 用正则去匹配要用该 loader 转换的 CSS 文件
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: ['css-loader']
-        })
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader'
+          }
+        ]
       }
+      // {
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({
+      //     use: ['css-loader']
+      //   })
+      // }
     ]
   },
   plugins: [
@@ -39,9 +49,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html',
       inject: 'body'
-    }),
-    new ExtractTextPlugin({
-      filename: `[name][hash:8].css`
     })
+    // new ExtractTextPlugin({
+    //   filename: `[name][hash:8].css`
+    // })
   ]
 }

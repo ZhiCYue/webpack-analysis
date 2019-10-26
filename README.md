@@ -18,4 +18,5 @@
 
 #### webpack-theory
 自实现webpack 的编译代码，包含自定义loader、plugin 等
-（另一篇原理：https://github.com/ZhiCYue/webpack-simple）
+
+另一篇原理：https://github.com/ZhiCYue/webpack-simple

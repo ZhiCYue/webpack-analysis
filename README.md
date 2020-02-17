@@ -13,6 +13,9 @@
 #### demo02
 加载js 模块，加载css 模块
 
+#### demo03
+es-module & commonjs
+
 #### project-framework
 实时更新最新的webpack 项目框架（待更新...）
 

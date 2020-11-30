@@ -12,7 +12,6 @@ class HTMLPlugin {
             const result = fs.readFileSync(this.options.template, 'utf-8');
 
             let $ = cheerio.load(result);
-            
             Object.keys(compilation.assets).forEach(item => {
                 $(`<script src="${item}"></script>`).appendTo('body');
             })

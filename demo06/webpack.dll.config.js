@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 const vendors = [
   'react',
-  'react-dom'
+  'react-dom',
 ]
 
 module.exports = {

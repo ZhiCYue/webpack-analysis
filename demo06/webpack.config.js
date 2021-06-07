@@ -1,16 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const vendors = [
-  'react',
-  'react-dom'
-]
-
 module.exports = {
   mode: 'development',
-  entry: {
-    vendor: vendors
-  },
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist'),
@@ -39,11 +32,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.DllPlugin({
-      path: path.join(__dirname, 'static/scripts', 'manifest.demo06.json'),
-      name: 'vendorLibrary',
-      format: true,
+    new webpack.DllReferencePlugin({
       context: __dirname,
-    })
+      manifest: require(`./static/scripts/manifest.demo06.json`)
+    }),
   ]
 };

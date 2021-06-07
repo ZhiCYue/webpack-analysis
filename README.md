@@ -16,6 +16,9 @@
 #### demo03
 es-module & commonjs
 
+#### demo06
+vendor 资源提取
+
 #### project-framework
 实时更新最新的webpack 项目框架（待更新...）
 

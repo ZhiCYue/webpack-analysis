@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { TNSClientPlugin } = require('@tinper/next-plugin');
+const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
   mode: "development",
@@ -28,6 +30,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new TNSClientPlugin({ libraryEnv: 'online' }),
+    // new ModuleFederationPlugin({
+    //   name: "tns_provider",
+    //   remotes: {
+    //     tns3nd: "tns3nd@http://yonbip.diwork.com/iuap-tns/ucf-wh/share/lib3nd/tns3nd.js",
+    //   }
+    // })
   ],
   devtool: 'source-map'
 };

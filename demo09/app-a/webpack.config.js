@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     // 项目 A 端口为 3001，项目 B 端口为 3002
-    publicPath: "http://localhost:3001/",
+    // publicPath: "http://localhost:3001/",
   },
   module: {
     rules: [
@@ -29,4 +29,5 @@ module.exports = {
       template: "./public/index.html",
     }),
   ],
+  devtool: 'source-map'
 };
